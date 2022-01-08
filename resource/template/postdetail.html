@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주 맛집 지도</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main detailWrap">
+        
+        <div class="postWrap">
+            <p class="postSection">위치: {{ food.section }}</p>
+            <p class="postName"> {{ food.name }}</p>
+            <img src= "{{ food.img }}" alt="" class="postImg">
+            <p class="postContent">추천이유: {{ food.content }}</p>
+        </div>
+
+    </main>
+</body>
+</html>

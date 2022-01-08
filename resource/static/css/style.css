@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "hambak";
+    src: url(../font/SF함박눈-TTF.ttf);
+}
+@font-face {
+    font-family: "tway";
+    src: url(../font/tway_sky.ttf);
+}
+
+/* reset.css */
+* {
+    margin: 0;padding: 0; box-sizing: border-box;text-decoration: none;
+    font-family: 'tway',sans-serif;
+}
+a, button {
+    cursor: pointer;
+}
+
+/* index.html */
+
+.indexBody {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgb(209, 209, 241), rgb(172, 199, 238));
+
+}
+.indexWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.indexHead {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+.indexContent {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.indexBtn {
+    width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    background-color: rgba(31, 92, 57, 0.694);
+    border: none;
+    color: #fff;
+}
+.indexImg {
+    width: 400px;
+    height: 400px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 10px rgba(0,0,0,0.1);
+}
+
+
+/* main */
+body{
+    background: linear-gradient(rgb(209, 209, 241), rgb(172, 199, 238));
+    height: 100%;
+    z-index: -10;
+}
+
+.mainWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+}
+.mainWrap h2 {
+    font-size: 28px;
+}
+.mainImg {
+    width: 500px;
+    height: 300px;
+    margin: 40px 0;
+}
+.mainList {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.mainBtn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 26px;
+    background-color: slateblue;
+    color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* post.html */
+.navigation {
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.postList {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 30px;
+  
+}
+.postList li {
+    font-family: 'hambak', sans-serif;
+    padding: 0 30px;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.postWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 100px 50px;
+    gap: 30px;
+}
+.postSection {
+    font-size: 16px;
+}
+.postName {
+    font-size: 28px;
+}
+.postImg {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px rgba(78, 78, 78, 0.4);
+}
+.postContent {
+    margin-bottom: 30px;
+    font-size: 18px;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+}
+
+/* postdetail */
+.detailWrap {
+    height: 1000px;
+}

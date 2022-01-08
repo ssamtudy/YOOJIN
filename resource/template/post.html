@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제주 맛집 지도</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navigation">
+        <a href="/">홈으로 돌아가기</a>
+        <ul class="postList">
+            <li><a href="?section=성산">성산</a></li>
+            <li><a href="?section=표선">표선</a></li>
+            <li><a href="?section=중문">중문</a></li>
+            <li><a href="?section=안덕">안덕</a></li>
+        </ul>
+        <a href='/blog/write'>작성</a>
+    </nav>
+    <main class="main">
+        
+        {% for i in data %}
+        <div class="postWrap">
+            <p class="postName"> {{ i.name }}</p>
+            <a href="{{ i.id }}"><img src= "{{ i.img }}" alt="" class="postImg"></a>
+            <p class="postContent">{{ i.content }}</p>
+            <p class="postSection">위치: {{ i.section }}</p>
+        </div>
+        {% endfor %}
+
+    </main>
+</body>
+</html>
