@@ -1,31 +1,80 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제주도 맛집 지도</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" href="css/reset.css">
-</head>
-<body class="indexBody">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/map.css" />
+  </head>
+  <body class="indexBody">
     <section class="indexWrap">
-        <h1 class="indexHead">제주도, 어디까지 가봤니</h1>
-        <p class="indexContent">제주도 프로 여행러의 제주도 맛집 지도</p>
-        <button class="indexBtn">맛집 찾으러 가기</button>
-        <img src="/assets/beach-3585794_1920.jpg" alt="제주도 사진" class="indexImg">
+      <h1 class="indexHead">제주도, 어디까지 가봤니</h1>
+      <p class="indexContent">제주도 프로 여행러의 제주도 맛집 지도</p>
+      <button class="indexBtn">맛집 찾으러 가기</button>
+      <img
+        src="/assets/beach-3585794_1920.jpg"
+        alt="제주도 사진"
+        class="indexImg"
+      />
     </section>
     <section class="mainWrap">
-        <h2>지역별 맛집 보러가기</h2>
-        <p>원하는 지역을 클릭해주세요!</p>
-        <img src="/assets/jejumap.png" alt="제주도 지도" class="mainImg">
-        <ul class="mainList">
-            <li ><a href="/blog/?section=성산"class="mainBtn">성산</a></li>
-            <li><a href="/blog/?section=표선" class="mainBtn">표선</a></li>
-            <li><a href="/blog/?section=중문" class="mainBtn">중문</a></li>
-            <li><a href="/blog/?section=안덕" class="mainBtn">안덕</a></li>
-        </ul>
+      <h2>지역별 맛집 보러가기</h2>
+      <p>원하는 지역을 클릭해주세요!</p>
+      <div class="mainImg">
+        <div class="map-container">
+          <img src="/assets/map/all.png" alt="" />
+          <div class="map-items">
+            <a href="">
+              <img class="default map-item1" src="/assets/map/1.png" alt="" />
+            </a>
+            <a href=""
+              ><img class="default map-item2" src="/assets/map/2.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item3" src="/assets/map/3.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item4" src="/assets/map/4.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item5" src="/assets/map/5.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item6" src="/assets/map/6.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item7" src="/assets/map/7.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item8" src="/assets/map/8.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item9" src="/assets/map/9.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item10" src="/assets/map/10.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item11" src="/assets/map/11.png" alt=""
+            /></a>
+            <a href=""
+              ><img class="default map-item12" src="/assets/map/12.png" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+      <ul class="mainList">
+        <li><a href="/blog/?section=성산" class="mainBtn">성산</a></li>
+        <li><a href="/blog/?section=표선" class="mainBtn">표선</a></li>
+        <li><a href="/blog/?section=중문" class="mainBtn">중문</a></li>
+        <li><a href="/blog/?section=안덕" class="mainBtn">안덕</a></li>
+        <li><a href="/blog/?section=한림" class="mainBtn">한림</a></li>
+        <li><a href="/blog/?section=제주시" class="mainBtn">제주시</a></li>
+      </ul>
     </section>
     <script src="/javascript/index.js"></script>
-</body>
+  </body>
 </html>

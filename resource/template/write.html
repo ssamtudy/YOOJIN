@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-</head>
-<body>
-    <form action="/blog/" method="post">
-        <label for="section">위치</label>
-        <input type="text" id="section" name="section"><br>
-        <label for="name">이름</label>
-        <input type="text" id="name" name="name"><br>
-        <label for="content">추천이유</label>
-        <input type="text" id="content" name="content"><br>
-        <label for="img"></label>
-        <input type="file" id="img" name="img"><br>
-        <button>저장</button>
-
-    </form>
-</body>
+    <link rel="stylesheet" href="static/css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="write-cont">
+      <nav class="navigation">
+        <a href="http://localhost:8080/blog/" class="write-home"></a>
+      </nav>
+      <main class="main mainWrite">
+        <form action="/blog/" method="post">
+          <label for="section">위치</label>
+          <input type="text" id="section" name="section" /><br />
+          <label for="name">이름</label>
+          <input type="text" id="name" name="name" /><br />
+          <label for="content">추천이유</label>
+          <input type="text" id="content" name="content" /><br />
+          <label for="img" class="label-img">사진</label>
+          <input type="file" id="img" name="img" /><br />
+          <button class="btn-save">저장</button>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>

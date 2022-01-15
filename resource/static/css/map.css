@@ -1,0 +1,119 @@
+.map-container {
+  position: relative;
+  width: 500px;
+  height: 300px;
+}
+.map-container img {
+  width: 500px;
+  height: 300px;
+}
+
+.map-container .map-items {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 0;
+  border: none;
+}
+.map-container .map-items .default:hover {
+  opacity: 1;
+  transition: ease all 0.5s;
+}
+
+.map-container .map-items .map-item1 {
+  width: 85px;
+  height: 76px;
+  position: absolute;
+  top: 155px;
+  left: 0px;
+  opacity: 0;
+}
+
+.map-container .map-items .map-item2 {
+  width: 100px;
+  height: 98px;
+  position: absolute;
+  top: 94px;
+  left: 35px;
+  opacity: 0;
+}
+.map-container .map-items .map-item3 {
+  width: 140px;
+  height: 120px;
+  position: absolute;
+  top: 60px;
+  left: 87px;
+  opacity: 0;
+}
+.map-container .map-items .map-item4 {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  top: 24px;
+  left: 160px;
+  opacity: 0;
+}
+.map-container .map-items .map-item5 {
+  width: 220px;
+  height: 150px;
+  position: absolute;
+  top: 4px;
+  right: 35px;
+  opacity: 0;
+}
+.map-container .map-items .map-item6 {
+  width: 20px;
+  height: 25px;
+  position: absolute;
+  top: 35px;
+  right: 3px;
+  opacity: 0;
+}
+.map-container .map-items .map-item7 {
+  width: 100px;
+  height: 130px;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  opacity: 0;
+}
+.map-container .map-items .map-item8 {
+  width: 120px;
+  height: 115px;
+  position: absolute;
+  bottom: 85px;
+  right: 75px;
+  opacity: 0;
+}
+.map-container .map-items .map-item9 {
+  width: 140px;
+  height: 115px;
+  position: absolute;
+  bottom: 46px;
+  right: 123px;
+  opacity: 0;
+}
+.map-container .map-items .map-item10 {
+  width: 156px;
+  height: 110px;
+  position: absolute;
+  bottom: 28px;
+  left: 130px;
+  opacity: 0;
+}
+.map-container .map-items .map-item11 {
+  width: 94px;
+  height: 104px;
+  position: absolute;
+  bottom: 20px;
+  left: 75px;
+  opacity: 0;
+}
+.map-container .map-items .map-item12 {
+  width: 84px;
+  height: 85px;
+  position: absolute;
+  bottom: 3px;
+  left: 6px;
+  opacity: 0;
+}
