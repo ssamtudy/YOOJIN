@@ -10,13 +10,19 @@
   </head>
   <body>
     <nav class="navigation">
-        <a href="http://localhost:8080/blog/">뒤로가기</a>
-    <main class="main detailWrap">
+      <a href="http://localhost:8080/blog/"
+        ><img src="/assets/home-solid.svg" alt="뒤로가기" class="btnBack"
+      /></a>
+    </nav>
+    <main class="detailWrap">
       <div class="postWrap">
-        <p class="postSection">[위치: {{ food.section }}]</p>
         <p class="postName">{{ food.name }}</p>
         <img src="{{ food.img }}" alt="" class="postImg" />
-        <p class="postContent">추천이유: {{ food.content }}</p>
+      </div>
+      <div class="decWrap">
+        <p class="postContent">{{ food.content }}</p>
+        <p class="postDec">{{ food.dec }}</p>
+        <p class="postSection">[위치: {{ food.section }}]</p>
       </div>
     </main>
   </body>

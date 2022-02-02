@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
-    <link rel="stylesheet" href="static/css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <div class="write-cont">
@@ -14,7 +14,7 @@
         <a href="http://localhost:8080/blog/" class="write-home"></a>
       </nav>
       <main class="main mainWrite">
-        <form action="/blog/" method="post">
+        <form method="post" enctype="multipart/form-data">
           <label for="section">위치</label>
           <input type="text" id="section" name="section" /><br />
           <label for="name">이름</label>

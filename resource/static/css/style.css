@@ -68,7 +68,7 @@ body {
   background: url(../assets/backgroung.jpg) fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0, 200px;
+  background-position: 0, -100px;
   height: 100%;
   z-index: -10;
 }
@@ -137,7 +137,18 @@ body {
   flex-wrap: wrap;
   align-items: center;
   margin: 0 50px;
+  padding: 20px 10px;
   gap: 30px;
+}
+.contWrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  line-height: 1.5;
+  text-align: center;
 }
 .postSection {
   font-size: 16px;
@@ -159,18 +170,45 @@ body {
   text-align: center;
   line-height: 30px;
   font-size: 22px;
+  margin: 5px 0;
 }
 .postSection {
+  margin-top: 25px;
   font-size: 20px;
 }
 
 /* postdetail */
-.main.detailWrap {
-  margin-top: 120px;
-  margin-right: 230px;
+.btnBack {
+  width: 20px;
+  height: 20px;
+}
+.detailWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
   align-self: baseline;
 }
-
+.detailWrap .postName {
+  font-size: 40px;
+}
+.detailWrap .postImg {
+  width: 350px;
+  height: 300px;
+}
+.detailWrap .decWrap {
+  margin-top: 55px;
+  width: 500px;
+}
+.decWrap .postDec {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.decWrap .postContent {
+  text-align: left;
+  font-size: 30px;
+  width: 500px;
+}
 /* write */
 .write-home {
   background: url(../assets/home-solid.svg) no-repeat;

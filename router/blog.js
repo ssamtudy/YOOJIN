@@ -4,9 +4,7 @@ let foods = require('../database/food');
 const multer = require('multer');
 const router = express.Router();
 
-경로 = path.join(path.join(__dirname + '/resource', '/static'));
-console.log(경로);
-router.use('/blog/', express.static(경로));
+photo = path.join(path.join(__dirname, 'resource', 'static'));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -18,14 +16,17 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage: storage });
-router.post('/write', upload.single('img'), function (req, res, next) {});
+router.post('/write', upload.single('img'), (req, res) => {
+  console.log(storage);
+  console.log(req.file);
+  res.render('write.html');
+});
 
 router.get('/', (req, res, next) => {
-  console.log(req.query);
   const section = req.query.section;
   let data = section
     ? foods.filter((b) => b.section === section).slice(0, 3)
-    : foods.slice(0, 3);
+    : foods;
   res.render('post.html', { data });
 });
 router.get('/write', (req, res, next) => {
@@ -50,7 +51,6 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   let id = req.params.id;
   let food = foods.find((b) => b.id == id);
-  console.log(food);
   res.render('postdetail.html', { food });
 });
 

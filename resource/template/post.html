@@ -28,8 +28,10 @@
         <a href="{{ i.id }}"
           ><img src="{{ i.img }}" alt="" class="postImg"
         /></a>
-        <p class="postContent">{{ i.content }}</p>
-        <p class="postSection">[위치: {{ i.section }}]</p>
+        <div class="contWrap">
+          <p class="postContent">{{ i.content }}</p>
+          <p class="postSection">[위치: {{ i.section }}]</p>
+        </div>
       </div>
       {% endfor %}
     </main>
