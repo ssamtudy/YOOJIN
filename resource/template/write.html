@@ -14,7 +14,12 @@
         <a href="http://localhost:8080/blog/" class="write-home"></a>
       </nav>
       <main class="main mainWrite">
-        <form method="post" enctype="multipart/form-data">
+        <form
+          action="/blog/"
+          method="post"
+          name="img"
+          enctype="multipart/form-data"
+        >
           <label for="section">위치</label>
           <input type="text" id="section" name="section" /><br />
           <label for="name">이름</label>

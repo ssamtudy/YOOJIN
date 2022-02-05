@@ -1,27 +1,11 @@
 const express = require('express');
+const { render } = require('nunjucks');
 const path = require('path');
 let foods = require('../database/food');
-const multer = require('multer');
 const router = express.Router();
 
 photo = path.join(path.join(__dirname, 'resource', 'static'));
-
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.filename);
-  },
-});
-
-const upload = multer({ storage: storage });
-router.post('/write', upload.single('img'), (req, res) => {
-  console.log(storage);
-  console.log(req.file);
-  res.render('write.html');
-});
-
+router.use('/blog/', express.static(photo));
 router.get('/', (req, res, next) => {
   const section = req.query.section;
   let data = section
@@ -29,23 +13,12 @@ router.get('/', (req, res, next) => {
     : foods;
   res.render('post.html', { data });
 });
-router.get('/write', (req, res, next) => {
-  res.render('write.html');
-});
-router.post('/', (req, res, next) => {
-  const id = foods.length + 1;
-  const section = req.body.section;
-  const name = req.body.name;
-  const content = req.body.content;
-  const img = req.body.img;
-  const pubDate = new Date().toString();
-  const modDate = new Date().toString();
-  let food = { id, section, name, content, img, pubDate, modDate };
-  foods.push(food);
-  res.redirect('/blog/');
-});
+
 router.get('/', (req, res, next) => {
   res.render('post.html', { data });
+});
+router.get('/write', (req, res, next) => {
+  res.render('write.html');
 });
 
 router.get('/:id', (req, res, next) => {
@@ -72,8 +45,10 @@ router.put('/:id', (req, res, next) => {
 // 삭제(DELETE) : blog/:id
 router.delete('/:id', (req, res, next) => {
   const id = req.params.id;
+  console.log(req.params.id);
   foods = foods.filter((b) => b.id != id);
   res.status(200).json(foods);
+  res.render('post.html', { data });
 });
 
 module.exports = router;
