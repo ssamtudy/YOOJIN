@@ -15,6 +15,7 @@ let foodSchema = new Schema({
   section: String,
   name: String,
   content: String,
+  dec: String,
   img: String,
   pubDate: String,
   modDate: String,

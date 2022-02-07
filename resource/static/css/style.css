@@ -245,6 +245,14 @@ body {
   background-color: transparent;
   border-bottom: 1px solid #000;
 }
+.main #dec {
+  height: 150px;
+  width: 400px;
+  margin: 10px 0 40px 0;
+  vertical-align: top;
+  background-color: transparent;
+  border: 1px solid #000;
+}
 .main #img {
   width: 1px;
   height: 1px;
