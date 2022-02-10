@@ -73,7 +73,7 @@ router.put('/:id', (req, res, next) => {
     food.section = req.body.section;
     food.name = req.body.name;
     food.content = req.body.content;
-    food.img = req.body.img;
+    food.img = `/assets/uploads/${req.file.filename}`;
     food.modDate = new Date().toString();
     res.status(200).json(foods);
   } else {
@@ -84,10 +84,9 @@ router.put('/:id', (req, res, next) => {
 // 삭제(DELETE) : blog/:id
 router.delete('/:id', (req, res, next) => {
   const id = req.params.id;
-  console.log(req.params.id);
-  foods = foods.filter((b) => b.id != id);
+  foods = foods.filter((food) => food.id != id);
   res.status(200).json(foods);
-  res.render('post.html', { data });
+  res.redirect('/');
 });
 
 module.exports = router;
