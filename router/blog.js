@@ -19,7 +19,6 @@ const storage = multer.diskStorage({
     cb(null, `${file.originalname}`);
   },
 });
-
 let foods = [];
 
 const upload = multer({ storage: storage });
@@ -44,26 +43,62 @@ router.post('/', upload.single('img'), (req, res) => {
     }
   });
 });
-
 router.get('/', (req, res, next) => {
-  const section = req.query.section;
-  let data = section
-    ? foods.filter((food) => food.section === section).slice(0, 3)
-    : foods;
-  res.render('post.html', { data });
+  // const section = req.query.section;
+  // let data = section
+  //   ? foods.filter((food) => food.section === section).slice(0, 3)
+  //   : foods;
+  foodSchema.find(function (error, foods) {
+    if (error) {
+      console.log(error);
+    } else {
+      const section = req.query.section;
+      let data = section
+        ? foods.filter((food) => food.section === section).slice(0, 3)
+        : foods;
+      res.render('post.html', { data });
+    }
+  });
 });
 
 router.get('/', (req, res, next) => {
-  res.render('post.html', { data });
+  foodSchema.find(function (error, foods) {
+    if (error) {
+      console.log(error);
+    } else {
+      res.render('post.html', { foods });
+    }
+  });
 });
+
 router.get('/write', (req, res, next) => {
   res.render('write.html');
+});
+router.get('/delete/:id', (req, res, next) => {
+  res.render('delete.html');
 });
 
 router.get('/:id', (req, res, next) => {
   const id = req.params.id;
-  let food = foods.find((food) => food.id == id);
-  res.render('postdetail.html', { food });
+  foodSchema.find(function (error, foods) {
+    if (error) {
+      console.log(error);
+    } else {
+      let food = foods.find((food) => food.id == id);
+      res.render('postdetail.html', { food });
+    }
+  });
+});
+router.delete('/delete/:id', (req, res, next) => {
+  console.log(id);
+  foodSchema.deleteOne({ id: req.params.id }, (err, foods) => {
+    if (err) {
+      return res.json(err);
+    } else {
+      console.log(foods);
+      res.redirect('/');
+    }
+  });
 });
 
 router.put('/:id', (req, res, next) => {
@@ -79,14 +114,6 @@ router.put('/:id', (req, res, next) => {
   } else {
     res.status(404);
   }
-});
-
-// 삭제(DELETE) : blog/:id
-router.delete('/:id', (req, res, next) => {
-  const id = req.params.id;
-  foods = foods.filter((food) => food.id != id);
-  res.status(200).json(foods);
-  res.redirect('/');
 });
 
 module.exports = router;

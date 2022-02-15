@@ -4,9 +4,7 @@ const nunjucks = require('nunjucks');
 const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
-const foods = require('./database/food.js');
 const blogRouter = require('./router/blog.js');
-const writeRouter = require('./router/write.js');
 const dateFilter = require('nunjucks-date-filter');
 const path = require('path');
 
@@ -33,7 +31,6 @@ app.get('/', (req, res, next) => {
   res.render('index.html');
 });
 app.use('/blog', blogRouter);
-app.use('/write', writeRouter);
 
 app.use((req, res, next) => {
   res.sendStatus(404);
