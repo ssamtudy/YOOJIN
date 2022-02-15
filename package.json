@@ -7,6 +7,10 @@
     "start": "node app.js",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "16.13.1",
+    "npm": "8.1.2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
