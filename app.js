@@ -42,10 +42,13 @@ app.use((err, req, res, next) => {
   res.sendStatus(500);
 });
 
-app.listen(process.env.PORT || 8080, function () {
-  console.log(
-    'Express server listening on port %d in %s mode',
-    this.address().port,
-    app.settings.env
-  );
-});
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT);
+// function () {
+//   console.log(
+//     'Express server listening on port %d in %s mode',
+//     this.address().port,
+//     app.settings.env
+//   );
+// });
