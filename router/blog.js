@@ -44,10 +44,6 @@ router.post('/', upload.single('img'), (req, res) => {
   });
 });
 router.get('/', (req, res, next) => {
-  // const section = req.query.section;
-  // let data = section
-  //   ? foods.filter((food) => food.section === section).slice(0, 3)
-  //   : foods;
   foodSchema.find(function (error, foods) {
     if (error) {
       console.log(error);
