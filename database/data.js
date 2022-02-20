@@ -4,8 +4,6 @@ const MONGODB_URI =
   'mongodb+srv://yoojin:qkrdbwls123@cluster0.o8pit.mongodb.net/map?retryWrites=true&w=majority';
 mongoose.connect(MONGODB_URI);
 
-mongoose.connect(MONGODB_URI);
-
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
