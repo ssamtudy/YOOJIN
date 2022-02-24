@@ -1,0 +1,31 @@
+@media screen and (max-width: 533px) {
+  .indexHead {
+    font-size: 30px;
+  }
+  .indexImg {
+    width: 300px;
+    height: 300px;
+  }
+  .map-container img {
+    width: 350px;
+    height: 200px;
+  }
+  .map-container .map-items {
+    display: none;
+  }
+  .mainList {
+    width: 400px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .mainBtn {
+    font-size: 20px;
+  }
+  .navigation {
+    height: 80px;
+    gap: 10px;
+  }
+  .postList {
+    font-size: 18px;
+  }
+}
