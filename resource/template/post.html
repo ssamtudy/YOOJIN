@@ -11,19 +11,20 @@
   </head>
   <body>
     <nav class="navigation">
-      <a href="/" class="backHome">
-        <img src="/assets/home-solid.svg" alt="" />
-      </a>
-      <ul class="postList">
-        <li><a href="/blog/">전체보기</a></li>
-        <li><a href="?section=성산">성산</a></li>
-        <li><a href="?section=표선">표선</a></li>
-        <li><a href="?section=중문">중문</a></li>
-        <li><a href="?section=안덕">안덕</a></li>
-        <li><a href="?section=한림">한림</a></li>
-        <li><a href="?section=제주시">제주시</a></li>
-      </ul>
-      <a href="/blog/write">작성</a>
+      <button class="btnMenu"></button>
+      <div class="navMenu">
+        <a href="/" class="backHome">홈으로 가기</a>
+        <ul class="postList">
+          <li><a href="/blog/">전체보기</a></li>
+          <li><a href="?section=성산">성산</a></li>
+          <li><a href="?section=표선">표선</a></li>
+          <li><a href="?section=중문">중문</a></li>
+          <li><a href="?section=안덕">안덕</a></li>
+          <li><a href="?section=한림">한림</a></li>
+          <li><a href="?section=제주시">제주시</a></li>
+        </ul>
+        <a href="/blog/write">작성</a>
+      </div>
     </nav>
     <main class="main">
       {% for i in data %}
@@ -39,5 +40,6 @@
       </div>
       {% endfor %}
     </main>
+    <script src="/javascript/post.js"></script>
   </body>
 </html>

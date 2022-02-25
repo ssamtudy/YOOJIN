@@ -1,4 +1,16 @@
-@media screen and (max-width: 533px) {
+@media screen and (max-width: 950px) {
+  .navMenu {
+    gap: 0px;
+  }
+  .postList {
+    font-size: 20px;
+  }
+  .postList li {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
   .indexHead {
     font-size: 30px;
   }
@@ -22,10 +34,86 @@
     font-size: 20px;
   }
   .navigation {
-    height: 80px;
+    height: 60px;
     gap: 10px;
+    display: block;
+    position: relative;
+  }
+  .navMenu {
+    display: none;
+  }
+  .navMenu.open {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 0 30px;
+    background-color: #fff;
+    gap: 25px;
+    border-bottom: 1px solid #888;
+  }
+  .btnMenu {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+  }
+  .backHome {
+    font-size: 18px;
   }
   .postList {
     font-size: 18px;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .postList li {
+    border-bottom: 1px solid #cfcfcf;
+    width: 100vw;
+  }
+  .detailWrap .postName {
+    font-size: 28px;
+  }
+  .detailNav {
+    display: flex;
+  }
+  .detailWrap .postImg {
+    width: 330px;
+    height: 300px;
+  }
+  .detailWrap .decWrap {
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+  .decWrap .postContent {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .decWrap .postDec {
+    padding: 0 20px;
+  }
+  .writeNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .writeNav .write-home {
+    display: block;
+  }
+  .main.mainWrite {
+    font-size: 24px;
+  }
+  .writeForm {
+    margin-left: 48px;
+    margin-top: -44px;
+  }
+  .main #dec {
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .main .btn-save {
+    margin-bottom: 40px;
   }
 }

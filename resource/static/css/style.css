@@ -110,14 +110,25 @@ body {
   max-width: 100vw;
   height: 80px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 150px;
   justify-content: center;
   align-items: center;
   background-color: #fff;
 }
+.btnMenu {
+  background: url('../assets/bars-solid.svg') no-repeat;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+.navMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
 .postList {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   list-style: none;
   font-size: 30px;
@@ -186,6 +197,7 @@ body {
 }
 .detailWrap {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
@@ -202,6 +214,10 @@ body {
   margin-top: 55px;
   width: 500px;
 }
+.decWrap .postContent {
+  margin-bottom: 30px;
+  width: 400px;
+}
 .decWrap .postDec {
   font-size: 20px;
   line-height: 1.5;
@@ -209,10 +225,9 @@ body {
 .decWrap .postContent {
   text-align: left;
   font-size: 30px;
-  width: 500px;
 }
 /* write */
-.write-home {
+.writeNav .write-home {
   background: url(../assets/home-solid.svg) no-repeat;
   width: 25px;
   height: 25px;
