@@ -18,6 +18,12 @@
     width: 300px;
     height: 300px;
   }
+  .mainImg {
+    width: auto;
+  }
+  .map-container {
+    width: auto;
+  }
   .map-container img {
     width: 350px;
     height: 200px;
@@ -26,7 +32,6 @@
     display: none;
   }
   .mainList {
-    width: 400px;
     flex-wrap: wrap;
     margin: 0 auto;
   }
@@ -53,7 +58,7 @@
   .btnMenu {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 20px;
     right: 20px;
   }
   .backHome {
@@ -67,6 +72,12 @@
   .postList li {
     border-bottom: 1px solid #cfcfcf;
     width: 100vw;
+  }
+  .postWrap {
+    padding: 20px 10px;
+  }
+  .detailWrap {
+    margin: 20px;
   }
   .detailWrap .postName {
     font-size: 28px;
@@ -90,6 +101,8 @@
     text-align: center;
     font-size: 20px;
     font-weight: 700;
+    width: auto;
+    margin: 0;
   }
   .decWrap .postDec {
     padding: 0 20px;
