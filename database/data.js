@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  'mongodb+srv://yoojin:qkrdbwls123@cluster0.o8pit.mongodb.net/map?retryWrites=true&w=majority'
+  process.env.MONGODB_URI ||
+    'mongodb+srv://yoojin:qkrdbwls123@cluster0.o8pit.mongodb.net/map?retryWrites=true&w=majority'
 );
 
 let db = mongoose.connection;
@@ -15,6 +16,7 @@ let foodSchema = new Schema({
   section: String,
   name: String,
   content: String,
+  dec: String,
   img: String,
   pubDate: String,
   modDate: String,
