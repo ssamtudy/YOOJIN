@@ -4,6 +4,7 @@ const nunjucks = require('nunjucks');
 const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
+
 const blogRouter = require('./router/blog.js');
 const dateFilter = require('nunjucks-date-filter');
 const path = require('path');
@@ -41,14 +42,4 @@ app.use((err, req, res, next) => {
   console.log(err);
   res.sendStatus(500);
 });
-
-const PORT = process.env.PORT || 8080;
-
-app.listen(PORT);
-// function () {
-//   console.log(
-//     'Express server listening on port %d in %s mode',
-//     this.address().port,
-//     app.settings.env
-//   );
-// });
+app.listen(8080);

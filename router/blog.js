@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 const ObjectID = require('mongodb').ObjectId;
 const foodSchema = require('../database/data');
 
-photo = path.join(path.join(__dirname, 'resource', 'static'));
-router.use('/', express.static(photo));
+photo = path.join(path.join(__dirname + '/resource', '/static'));
+router.use('/blog/', express.static(photo));
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -58,13 +58,12 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/', (req, res, next) => {
-  foodSchema.find(function (error, foods) {
-    if (error) {
-      console.log(error);
-    } else {
-      res.render('post.html', { foods });
-    }
-  });
+  console.log(req.query);
+  const section = req.query.section;
+  let data = section
+    ? foods.filter((b) => b.section === section).slice(0, 3)
+    : foods;
+  res.render('post.html', { data });
 });
 
 router.get('/write', (req, res, next) => {
